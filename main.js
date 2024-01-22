@@ -7,8 +7,8 @@ function setup() {
     video = createCapture(VIDEO);
     video.size(300, 300);
     video.position(100, 400)
-    canvas = createCanvas(550, 550);
-    canvas.position(300, 400);
+    canvas = createCanvas(400, 400);
+    canvas.position(500, 400);
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses);
 }
@@ -30,9 +30,9 @@ function gotPoses(results) {
 }
 
 function draw() {
-    background("dark blue");
+    background("darkblue");
     document.getElementById("font_size").innerHTML = "O tamanho da fonte sera: " + difference + "px";
     textSize(difference);
-    fill(white);
+    fill("white");
     text("Oi como esta", 50, 400);
 }
